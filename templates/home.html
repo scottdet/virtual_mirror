@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1250px)" href="{{ url_for('static', filename='css/home-smaller.css') }}" />
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1075px)" href="{{ url_for('static', filename='css/home-tablet.css') }}" />
+<link rel="stylesheet" type="text/css" media="only screen and (max-width: 650px)" href="{{ url_for('static', filename='css/home-mobile.css') }}" />
+</head>
+  
+<body>
+
+<!-- webpage content goes here in the body -->
+
+	<div id="page">
+		<div id="header">
+			<div id="logo">
+				<img border="0" alt="lldh" src="{{ url_for('static', filename='img/avenir.png') }}" width="263" height="33">
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<li><a href="https://littlelogodadhat.com/blogs/blog">Blog</a></li>
+				</ul>	
+			</div>
+
+			<div class="dropdown">
+  				<button class="dropbtn"></button>
+  				<div class="dropdown-content">
+    					<a href="about.html">About</a>
+    					<a href="https://littlelogodadhat.com/blogs/blog">Blog</a>
+  				</div>
+			</div>			
+
+		</div>
+		<div id="wrap">
+			<div id="left_col">
+				<video autoplay="true" id="videoElement" style="display:none" width="550" height="350">
+    				</video>
+    				<img id="placeholder"></img>
+			</div>
+			<div id="thumbnailContainer">
+			</div>
+			<div id="center_col">
+			</div>
+			<div id="right_col">
+				<h1> Little Fake News Logo Dad Hat </h1>
+				<p> Orem Ipsum is simply dummby text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard cummy text ever since the 1500s, when an unkown printer took a galley of type and scrambled it to make a type specimen book </p>
+				<h2> $27.95 </h2>
+				<p> + free shipping </p>
+				<div id="button">
+					<ul>
+						<li><a href="https://littlelogodadhat.com/collections/the-artisan-collection/products/little-fake-news-logo-dad-hat">Buy Now</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+    	<div id="footer">
+		<div id="ftext">
+			<a href="https://www.facebook.com/littlelogodadhat">
+			<img border="0" alt="facebook" src="logos/facebook.png" width="49" height="44">
+			<a href="https://www.instagram.com/littlelogodadhat">
+			<img border="0" alt="instragram" src="logos/instagram.png" width="49" height="44">
+			<a href="https://www.twitter.com/little_logo">
+			<img border="0" alt="twitter" src="logos/twitter.png" width="49" height="44">
+			<p> Copyright 2017 Little Logo Dad Hat</p>
+		</div>
+	</div>
+	-->
+<script>
+
+ 
+var video = document.querySelector("#videoElement");
+var thumbs = document.getElementById("thumbnailContainer");
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {
+    console.log("suh");     
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+
+var video = document.getElementById("videoElement");
+var i = 0;
+
+function httpPost(theUrl,str)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "POST", theUrl, false ); // false for synchronous request
+    xmlHttp.send( str );
+    return xmlHttp.responseText;
+}
+
+function generateThumbnail() {
+  var c = document.createElement("canvas");
+  var ctx = c.getContext("2d");
+  c.width = 160;
+  c.height = 120;
+  ctx.drawImage(video, 0, 0, 160, 120);
+  var str = c.toDataURL()
+  var imgtxt = var imgtxt = httpPost("https://server_address/hatpls", str);
+;
+  var img = document.getElementById("placeholder") // new Image()
+  img.src = 'data:image/png;base64,'+imgtxt
+  img.style = 'width:550px;height:350px;'
+}
+
+video.addEventListener('loadeddata', function() {
+    this.currentTime = i;
+    generateThumbnail();
+});
+
+var id = setInterval(generateThumbnail,100)
+
+function videoError(e) {
+    // do something
+}
+
+</script>
+
+</body>
+</html>

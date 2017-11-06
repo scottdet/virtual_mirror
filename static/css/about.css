@@ -1,0 +1,98 @@
+<style rel="stylesheet" type="text/css">
+
+/*
+* multi-line comment
+*/
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+	font-weight: normal;
+	line-height: 1.2em;
+	margin: 0 0 .6em 0;
+}
+h1{ font-size: 1.7em; }
+h2{ font-size: 1.7em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+
+/* you can structure your code's white space so that it is as readable for when you come back in the future or for other people to read and edit quickly */
+
+body{
+    font-family: 'Lora'; font-size: 100%; line-height: 1.3em; width: 100%; margin: 0; background: white;
+}
+/* you can put your code all in one line like above */
+
+/* or on different lines like below */
+
+#header{
+	padding-top: 1px;
+	padding-bottom: 5px;
+	box-shadow: 0px 1px 3px gray;
+}
+
+#logo{
+	max-width: 35%;
+	margin-top: 16px;
+	margin-bottom: 6px;
+	margin-left: 70px;	
+}
+
+/* but try and be as concise as possible */
+#nav{
+	width: 65%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{
+		margin-top: -38px;
+		margin-right: 50px;
+}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+			padding-right: 30px;
+		}
+			#nav ul li a{
+				font-family: 'Open Sans';
+				font-weight: 500;
+				padding-bottom: 20px;
+				padding-right: 10px;
+				padding-left: 10px;
+				background: white;
+				color: black;
+			}
+			#nav ul li a:hover{
+				color: #4A90E2;
+			}
+			#nav ul li a:active{ color: #4A90E2; }
+
+#about{
+	padding-top: 70px;
+	text-align: center;
+}
+
+	#about p{
+		text-align: left;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+#footer{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
+#footer img:hover{
+	opacity: 0.80;
+}
+
+#ftext p{
+	margin-top: 5px;
+}
+

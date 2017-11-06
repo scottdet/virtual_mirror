@@ -1,0 +1,155 @@
+<style rel="stylesheet" type="text/css">
+
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+	font-weight: normal;
+	line-height: 1.2em;
+	margin: 0 0 .6em 0;
+}
+h1{ font-size: 1.7em; }
+h2{ font-size: 1.7em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+
+body{
+    font-family: 'Lora'; font-size: 100%; line-height: 1.3em; width: 100%; margin: 0; background: white;
+}
+
+#header{
+	padding-top: 1px;
+	padding-bottom: 5px;
+	box-shadow: 0px 1px 3px gray;
+}
+
+#logo{
+	max-width: 35%;
+	margin-top: 16px;
+	margin-bottom: 6px;
+	margin-left: 30px;	
+}
+
+#nav{
+	width: 65%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{
+		margin-top: -38px;
+		margin-right: 0px;
+	}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+			padding-right: 30px;
+		}
+			#nav ul li a{
+				font-family: 'Open Sans';
+				font-weight: 500;
+				padding-bottom: 20px;
+				padding-right: 10px;
+				padding-left: 10px;
+				background: white;
+				color: black;
+			}
+			#nav ul li a:hover{
+				color: #4A90E2;
+			}
+			#nav ul li a:active{ color: #4A90E2; }
+
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+}
+#left_col {
+	margin-top: -30px;
+	padding-top: 70px;
+	background-color: white;
+	float: left;
+	width: 50%;
+}
+	#left_col img{
+		padding-left: 40px;
+		display: block;	
+	}
+	#videoElement{
+		padding-left: 0px;
+	}
+
+#right_col {
+	margin-top: -30px;
+	margin-right: 0px;
+	padding-top: 70px;
+	background-color: white;
+	float: right;
+	width: 50%;
+}
+	#right_col h1{
+		padding-left: 10px;
+		padding-bottom: 18px;
+		padding-right: 30px;
+	}
+
+	#right_col h2{
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	#right_col p{
+		margin-top: -12px;
+		padding-left: 10px;
+		padding-right: 30px;
+		line-height: 1.4em;
+	}
+
+	#button{
+		padding-left: 0px;
+		width: 100%;
+		display: block;
+		text-align: left;
+		float: left;
+	}
+		#button ul{
+			margin-top: 30px;
+			margin-left: -30px;
+		}
+			#button ul li{
+				display: inline-block;
+				height: 62px;
+			}
+				#button ul li a{
+					font-family: 'Lora';
+					font-size: 16px;
+					font-weight: bold;
+					padding-top: 12px;
+					padding-bottom: 12px;
+					padding-right: 30px;
+					padding-left: 30px;
+					background: #4A90E2;
+					color: white;
+					border-radius: 30px 30px 30px 30px;
+				}
+				#button ul li a:hover{
+					opacity: 0.80;
+					box-shadow: 0px 1px 1px #666;
+				}
+				#button ul li a:active{ background-color: #4A90E2; }
+
+#footer{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
+#footer img:hover{
+	opacity: 0.80;
+}
+
+#ftext p{
+	margin-top: 5px;
+}
