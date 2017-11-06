@@ -1,4 +1,4 @@
-from flask import Flask, request, send_from_directory,render_template
+from flask import Flask, request, send_from_directory, render_template
 from utils_local import getFrame
 from OpenSSL import SSL
 from io import BytesIO
@@ -41,6 +41,7 @@ def hatpls():
     frm = base64.b64encode(buf)
     return frm
 
+# visit localhost:6000 to view the contents of this.
 if __name__ == "__main__":
     context = ('server.crt', 'server.key')
-    app.run(host="0.0.0.0", port=6000,ssl_context=context)
+    app.run(host="0.0.0.0", port=6000, ssl_context=context)
