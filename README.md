@@ -18,5 +18,6 @@ The more straightforward usage is server_local.py and utils_local.py. This shoul
 
 Here are some examples of how it changed along the way. It is fairly straightfoward to edit the  `getFrame` function in the local versions to draw an outline of your face. follow the second link and mess around with opencvs drawing functions, this is both fun and a helpful learning experience. 
 
+![Recognizing my face](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
-
+![Placing a hat] ()
