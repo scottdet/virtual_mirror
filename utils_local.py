@@ -58,8 +58,8 @@ def getFrame(frame):
 	
 		shape = predictor(gray, rect)
 		dY = shape.part(39).y - shape.part(42).y
-        dX = shape.part(39).x - shape.part(42).x
-        angle = int(np.degrees(np.arctan2(dX, dY)) + 90)
+        	dX = shape.part(39).x - shape.part(42).x
+        	angle = int(np.degrees(np.arctan2(dX, dY)) + 90)
 		center = ((shape.part(39).x + shape.part(42).x) // 2, (shape.part(39).y + shape.part(42).y) // 2)
 		
 		rot_hat = imutils.rotate_bound(imgHat, -angle)
@@ -78,7 +78,7 @@ def getFrame(frame):
 		coord_1 = int(center[0] + (0.5*(w_2/1.1)) - (1.6*angle))
 		coord_2 = int(center[1] - (0.1*(h_2/1.1)) + (0.3*angle))
 		
-        # resize and place hat
+        	# resize and place hat
 		final_hat = cv2.resize(rot_hat, (w_2, h_2))
 		roi = frame[coord_2-h_2:coord_2, coord_1-w_2:coord_1]
 		dst = add_img(roi, final_hat)
