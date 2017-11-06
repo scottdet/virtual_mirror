@@ -26,4 +26,4 @@ Here are some examples of how it changed along the way. It is fairly straightfow
 
 Note: I realize the hat is a bit small here, this isn't the case in my current version but haven't updated the video. I also hardcoded the hat size which isn't ideal, probably better to make something that changes the hat size dynamically in the future.
 
-![Placing a hat] (https://github.com/scottdet/virtual_mirror/blob/master/placed.gif)
+![Placing a hat](https://github.com/scottdet/virtual_mirror/blob/master/placed.gif)
